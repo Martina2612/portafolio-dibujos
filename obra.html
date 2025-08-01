@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Obra - Martina Art</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <style>
+    /* Estilos específicos para la página de detalle */
+    .detail-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+    .detail-image {
+      flex: 1 1 400px;
+      max-width: 600px;
+    }
+    .detail-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .detail-info {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 1rem;
+    }
+    .detail-info h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+    .detail-info p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.5;
+    }
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: #333;
+      background: rgba(255,255,255,0.8);
+      padding: 0.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.2s;
+    }
+    .nav-arrow:hover {
+      background: rgba(255,255,255,1);
+    }
+    #prev-obra {
+      left: -1.5rem;
+    }
+    #next-obra {
+      right: -1.5rem;
+    }
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      color: #333;
+      text-decoration: none;
+      background: rgba(255,255,255,0.8);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .close-btn:hover {
+      background: rgba(255,255,255,1);
+    }
+    @media (max-width: 768px) {
+      .detail-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .nav-arrow {
+        display: none;
+      }
+      .close-btn {
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="detail-container" id="detail-container">
+      <!-- Botón cerrar -->
+      <a href="index.html" class="close-btn">&times;</a>
+
+      <!-- Flechas prev/next -->
+      <a href="#" id="prev-obra" class="nav-arrow">&#8592;</a>
+      <a href="#" id="next-obra" class="nav-arrow">&#8594;</a>
+
+      <!-- Imagen -->
+      <div class="detail-image">
+        <img id="imagen" src="" alt="" loading="lazy"/>
+      </div>
+
+      <!-- Información -->
+      <div class="detail-info">
+        <h1 id="titulo">Cargando...</h1>
+        <p id="descripcion">Descripción de la obra…</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Martina Art - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="js/obras.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    // Reutilizamos tus funciones para cargar detalles
+    document.addEventListener('DOMContentLoaded', function() {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+      const obra = obras.find(o => o.id === parseInt(id));
+      const imgEl = document.getElementById('imagen');
+      const titleEl = document.getElementById('titulo');
+      const descEl = document.getElementById('descripcion');
+      const prevLink = document.getElementById('prev-obra');
+      const nextLink = document.getElementById('next-obra');
+
+      if (obra) {
+        imgEl.src = obra.imagen;
+        imgEl.alt = obra.titulo;
+        titleEl.textContent = obra.titulo;
+        descEl.textContent = obra.descripcion;
+      } else {
+        titleEl.textContent = 'Obra no encontrada';
+        descEl.textContent = '';
+      }
+
+      // Prev/Next
+      const idx = obras.findIndex(o => o.id === parseInt(id));
+      if (idx > 0) {
+        prevLink.href = `obra.html?id=${obras[idx-1].id}`;
+      } else {
+        prevLink.style.display = 'none';
+      }
+      if (idx < obras.length - 1) {
+        nextLink.href = `obra.html?id=${obras[idx+1].id}`;
+      } else {
+        nextLink.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
