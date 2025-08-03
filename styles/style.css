@@ -90,9 +90,14 @@ body {
 }
 
 .main-nav a:hover::after,
+.main-nav a.active {
+  font-weight: 600;
+}
 .main-nav a.active::after {
   opacity: 1;
 }
+
+
 
 /* ----------------------- */
 /*       Filtros          */

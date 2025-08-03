@@ -7,6 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentFilter = 'all';
     let isLoading = false;
 
+    const navLinks = document.querySelectorAll(".main-nav a");
+    const current = location.pathname.split("/").pop() || "index.html";
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute("href");
+        if (href === current) {
+        link.classList.add("active");
+        }
+    });
+
     // Inicializar la aplicación
     init();
 

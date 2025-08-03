@@ -2,96 +2,144 @@
 const obras = [
   {
     id: 1,
-    titulo: "Atardecer en el bosque",
+    titulo: "Bubble Cat",
     imagen: "imagenes/dibu1.jpg",
-    categoria: "paisaje",
-    descripcion: "Un dibujo que captura la serenidad de un atardecer entre los árboles, usando técnicas de sombreado para crear profundidad y atmósfera. Esta obra representa mi fascinación por los momentos de transición del día, donde la luz dorada se filtra entre las hojas creando un ambiente mágico y contemplativo.",
-    tecnica: "Lápiz grafito y carboncillo",
-    año: "2024",
-    dimensiones: "30x40 cm",
-    disponible: true,
-    precio: "$150",
-    tags: ["naturaleza", "atardecer", "bosque", "grafito"]
+    descripcion: "Inspired by the works of M.C. Escher. Made with fibers and black markers of various strokes."
   },
   {
     id: 2,
-    titulo: "Retrato en grafito",
+    titulo: "Rose",
     imagen: "imagenes/dibu2.jpg",
-    categoria: "retrato",
-    descripcion: "Retrato detallado realizado completamente a lápiz grafito, enfocándose en las expresiones faciales y los juegos de luz y sombra. Este trabajo explora la profundidad emocional que se puede capturar através del contraste y la técnica del claroscuro, buscando transmitir la personalidad única del modelo.",
-    tecnica: "Lápiz grafito",
-    año: "2024",
-    dimensiones: "25x35 cm",
-    disponible: false,
-    precio: "$200",
-    tags: ["retrato", "grafito", "claroscuro", "expresión"]
+    descripcion: "An open rose with two buds, painted with watercolors in soft pink and green tones. Clean and delicate technique."
   },
   {
     id: 3,
-    titulo: "Composición abstracta",
-    imagen: "imagenes/dibu3.jpg", // Placeholder - reemplaza con tu imagen
-    categoria: "abstracto",
-    descripcion: "Exploración de formas y texturas abstractas que juegan con la percepción del espectador. Esta pieza busca romper con la representación tradicional para crear un diálogo puramente visual basado en el ritmo, el movimiento y la armonía de las formas geométricas.",
-    tecnica: "Técnica mixta",
-    año: "2024",
-    dimensiones: "40x50 cm",
-    disponible: true,
-    precio: "$180",
-    tags: ["abstracto", "formas", "geometría", "experimental"]
+    titulo: "idk",
+    imagen: "imagenes/dibu3.jpg",
+    descripcion: "Realistic portrait of a long-haired cat. The fur is carefully crafted using a pencil technique."
   },
   {
     id: 4,
-    titulo: "Arte digital experimental",
-    imagen: "imagenes/dibu4.jpg", // Placeholder - reemplaza con tu imagen
-    categoria: "digital",
-    descripcion: "Creación digital que combina técnicas tradicionales con herramientas digitales modernas. Esta obra representa la fusión entre lo clásico y lo contemporáneo, explorando nuevas posibilidades expresivas a través de la tecnología sin perder la esencia artística tradicional.",
-    tecnica: "Arte digital",
-    año: "2024",
-    dimensiones: "Digital - Variable",
-    disponible: true,
-    precio: "$120",
-    tags: ["digital", "experimental", "tecnología", "fusión"]
+    titulo: "Chihiro",
+    imagen: "imagenes/dibu4.jpg",
+    descripcion: "Scene from Hayao Miyazaki's film Spirited Away. Done in watercolor."
   },
   {
     id: 5,
-    titulo: "Arte digital experimental",
-    imagen: "imagenes/dibu5.jpg", // Placeholder - reemplaza con tu imagen
-    categoria: "digital",
-    descripcion: "Creación digital que combina técnicas tradicionales con herramientas digitales modernas. Esta obra representa la fusión entre lo clásico y lo contemporáneo, explorando nuevas posibilidades expresivas a través de la tecnología sin perder la esencia artística tradicional.",
-    tecnica: "Arte digital",
-    año: "2024",
-    dimensiones: "Digital - Variable",
-    disponible: true,
-    precio: "$120",
-    tags: ["digital", "experimental", "tecnología", "fusión"]
+    titulo: "Hippocampus",
+    imagen: "imagenes/dibu5.jpg",
+    descripcion: "Done in ocean blue graphite. The hippocampus is a mythical creature that is half horse and half fish, often depicted in Greek mythology as a sea horse."
   },
   {
     id: 6,
-    titulo: "Arte digital experimental",
-    imagen: "imagenes/dibu6.jpg", // Placeholder - reemplaza con tu imagen
-    categoria: "digital",
-    descripcion: "Creación digital que combina técnicas tradicionales con herramientas digitales modernas. Esta obra representa la fusión entre lo clásico y lo contemporáneo, explorando nuevas posibilidades expresivas a través de la tecnología sin perder la esencia artística tradicional.",
-    tecnica: "Arte digital",
-    año: "2024",
-    dimensiones: "Digital - Variable",
-    disponible: true,
-    precio: "$120",
-    tags: ["digital", "experimental", "tecnología", "fusión"]
+    titulo: "Kiki",
+    imagen: "imagenes/dibu6.jpg",
+    descripcion: "Portrait of a scene from Hayao Miyazaki's film 'Kiki's Delivery', using different materials such as acrylics and watercolors."
   },
   {
     id: 7,
-    titulo: "Arte digital experimental",
-    imagen: "imagenes/dibu7.jpg", // Placeholder - reemplaza con tu imagen
-    categoria: "digital",
-    descripcion: "Creación digital que combina técnicas tradicionales con herramientas digitales modernas. Esta obra representa la fusión entre lo clásico y lo contemporáneo, explorando nuevas posibilidades expresivas a través de la tecnología sin perder la esencia artística tradicional.",
-    tecnica: "Arte digital",
-    año: "2024",
-    dimensiones: "Digital - Variable",
-    disponible: true,
-    precio: "$120",
-    tags: ["digital", "experimental", "tecnología", "fusión"]
+    titulo: "Orchids",
+    imagen: "imagenes/dibu7.jpg",
+    descripcion: ""
+  },
+  {
+    id: 8,
+    titulo: "Michelangelo",
+    imagen: "imagenes/dibu8.jpg",
+    descripcion: "Detailed study of Michelangelo's David sculpture, done in pencil. The shadows and volumes are carefully modeled, reflecting the power of Renaissance art."
+  },
+  {
+    id: 9,
+    titulo: "Koi Fish",
+    imagen: "imagenes/dibu9.jpg",
+    descripcion: "The Koi fish is a symbol of perseverance and tenacity as it swims upstream against the current. Legend has it that upon reaching the top of the waterfall, the Koi fish turns into a dragon after its journey against the current."
+  },
+  {
+    id: 10,
+    titulo: "Over the Garden Wall",
+    imagen: "imagenes/dibu10.jpg",
+    descripcion: "Done in watercolor."
+  },
+  {
+    id: 11,
+    titulo: "Hand Study",
+    imagen: "imagenes/dibu11.jpg",
+    descripcion: "Series of anatomical sketches in terracotta tones. Each hand conveys a different posture: tension, calm, communication."
+  },
+  {
+    id: 12,
+    titulo: "Girl with a Pearl Earring",
+    imagen: "imagenes/dibu12.jpg",
+    descripcion: "Graphite sketch inspired by Johannes Vermeer's painting."
+  },
+  {
+    id: 13,
+    titulo: "Aristocratic Frog",
+    imagen: "imagenes/dibu13.jpg",
+    descripcion: ""
+  },
+  {
+    id: 14,
+    titulo: "Birds in the wild",
+    imagen: "imagenes/dibu14.jpg",
+    descripcion: "Observing different birds in nature"
+  },
+  {
+    id: 15,
+    titulo: "Notre Dame",
+    imagen: "imagenes/dibu15.jpg",
+    descripcion: "Notre Dame Cathedral in Paris, France. I created this piece after reading Notre Dame de Paris by Victor Hugo, one of my favorite books."
+  },
+  {
+    id: 16,
+    titulo: "The Burden of Humanity",
+    imagen: "imagenes/dibu16.jpg",
+    descripcion: "Done in graphite. It evokes struggle or balance, inspired by Leonardo da Vinci's Vitruvian Man combined with the Fibonacci spiral."
+  },
+  {
+    id: 17,
+    titulo: "Konbini",
+    imagen: "imagenes/dibu17.jpg",
+    descripcion: "Small shop in Tokyo, done in watercolor. The scene captures the essence of Japanese convenience stores, known as 'konbini', which are ubiquitous in urban areas."
+  },
+  {
+    id: 18,
+    titulo: "Horse",
+    imagen: "imagenes/dibu18.jpg",
+    descripcion: "Different perspectives and movements."
+  },
+  {
+    id: 19,
+    titulo: "Woman's portrait",
+    imagen: "imagenes/dibu19.jpg",
+    descripcion: "What is she looking?"
+  },
+  {
+    id: 20,
+    titulo: "Road to the Andes",
+    imagen: "imagenes/dibu20.jpg",
+    descripcion: "Mountain landscape with a path, trees, and snow-capped hills. Done in black ink."
+  },
+  {
+    id: 21,
+    titulo: "Fusion",
+    imagen: "imagenes/dibu21.jpg",
+    descripcion: "The neurons of the heart are the secret memory of the soul."
+  },
+  {
+    id: 22,
+    titulo: "Elephant",
+    imagen: "imagenes/dibu22.jpg",
+    descripcion: "Different perspectives of my favorite animal."
+  },
+  {
+    id: 23,
+    titulo: "Woman waiting",
+    imagen: "imagenes/dibu23.jpg",
+    descripcion: "Artistic expression that reflects intense emotions through a woman's gaze and colors."
   }
 ];
+
 
 // Función para obtener una obra por ID
 function getObraById(id) {
